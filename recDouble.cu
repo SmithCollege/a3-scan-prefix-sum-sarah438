@@ -72,10 +72,10 @@ int main(void){
         scan<<<x, BLOCK_SIZE>>>(input, output);
         cudaDeviceSynchronize();
 
-        # for(int i = 0; i<SIZE; i++){
-        #       printf("%d ", output[i]);
-        # }
-        # printf("\n");
+        for(int i = 0; i<SIZE; i++){
+              printf("%d ", output[i]);
+        }
+        printf("\n");
 
         // print our error
         printf("%s\n", cudaGetErrorString(cudaGetLastError()));
